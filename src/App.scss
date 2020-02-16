@@ -1,0 +1,142 @@
+* {
+  box-sizing: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#3498db, #95a5a6);
+}
+
+$height-search: 40px;
+$color-main: #3498db;
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+.signature {
+  text-transform: uppercase;
+  position: absolute;
+  top: 80%;
+  left: -40px;
+  font-size: 20px;
+  transform: rotate(-90deg) translateX(-20%);
+  -webkit-animation: my 700ms infinite;
+  -moz-animation: my 700ms infinite;
+  -o-animation: my 700ms infinite;
+  animation: my 700ms infinite;
+  @-webkit-keyframes my {
+    0% {
+      color: black;
+    }
+    50% {
+      color: #95a5a6;
+    }
+    100% {
+      color: black;
+    }
+  }
+  @-moz-keyframes my {
+    0% {
+      color: black;
+    }
+    50% {
+      color: #95a5a6;
+    }
+    100% {
+      color: black;
+    }
+  }
+  @-o-keyframes my {
+    0% {
+      color: black;
+    }
+    50% {
+      color: #95a5a6;
+    }
+    100% {
+      color: black;
+    }
+  }
+  @keyframes my {
+    0% {
+      color: black;
+    }
+    50% {
+      color: #95a5a6;
+    }
+    100% {
+      color: black;
+    }
+  }
+}
+
+.main-app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .weather {
+    color: white;
+    margin: 0 auto;
+    width: 480px;
+    min-height: 480px;
+    background: #3498db;
+    .logo {
+      font-size: 50px;
+      letter-spacing: 10px;
+    }
+    .search {
+      position: relative;
+      .input-search {
+        height: $height-search;
+        padding-left: 60px;
+        transition: all 500ms;
+        outline: none;
+        &:focus {
+          padding-left: 40px;
+        }
+      }
+      .icon-search,
+      .location-icon {
+        position: absolute;
+        line-height: $height-search;
+        font-size: 30px;
+      }
+      .icon-search {
+        top: 0;
+        right: 0;
+        color: #16a085;
+      }
+      .location-icon {
+        margin-left: 10px;
+        color: $color-main;
+      }
+      .search-item {
+        position: absolute;
+        width: 100%;
+        .item {
+          height: $height-search;
+          line-height: $height-search;
+          padding: 0 20px;
+          border-bottom: 1px solid #16a085;
+          cursor: pointer;
+        }
+      }
+    }
+    &-main {
+      .main-image {
+        font-size: 110px;
+      }
+    }
+  }
+}
