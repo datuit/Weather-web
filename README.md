@@ -16,7 +16,6 @@ Check the weather anywhere simply
 /* First, Install the needed packages */
 npm install
 
-/* Then start both Node and React */
 
 /* To run the start */
 npm start
